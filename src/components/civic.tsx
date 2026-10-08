@@ -1,13 +1,13 @@
 import type { ReactNode } from "react";
 import { Link } from "@tanstack/react-router";
-import { Leaf } from "lucide-react";
+import logoAsset from "@/assets/civictrace-logo.png.asset.json";
 
 export function Shell({ children }: { children: ReactNode }) {
   return (
     <div className="min-h-screen bg-background">
       <div className="mx-auto max-w-md px-5 pb-10 pt-6">
         <Link to="/" className="flex items-center gap-2">
-          <Leaf className="h-6 w-6 text-primary" strokeWidth={1.75} />
+          <img src={logoAsset.url} alt="CivicTrace" className="h-9 w-9" />
           <span className="font-serif text-2xl font-bold text-primary">CivicTrace</span>
         </Link>
         <p className="mt-1 text-sm italic text-muted-foreground">Digital identity for municipal waste</p>

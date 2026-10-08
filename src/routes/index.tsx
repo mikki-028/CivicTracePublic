@@ -1,7 +1,7 @@
 import { createFileRoute, useNavigate } from "@tanstack/react-router";
 import { useState } from "react";
-import { QrCode } from "lucide-react";
 import { Shell, BigButton } from "@/components/civic";
+import logoAsset from "@/assets/civictrace-logo.png.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -23,7 +23,7 @@ function Index() {
   return (
     <Shell>
       <div className="rounded-3xl border border-border bg-card p-6">
-        <QrCode className="h-10 w-10 text-accent" strokeWidth={1.5} />
+        <img src={logoAsset.url} alt="CivicTrace" className="h-16 w-16" />
         <h1 className="mt-4 text-3xl font-bold leading-tight">
           Scan the <span className="scribble">QR code</span> on a waste point
         </h1>
