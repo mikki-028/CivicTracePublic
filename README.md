@@ -1,24 +1,30 @@
-# Pixel Perfect Implementation
+# CivicTrace — Public Waste Management Portal
 
-Implement exactly the screenshot and nothing else
+**Live Demo:** (https://civic-trace-public.vercel.app/)
 
-This project was built with [Lovable](https://lovable.dev).
+CivicTrace is a citizen-facing waste management platform designed to simplify public waste reporting and improve transparency, accessibility, and coordination between citizens and waste management authorities.
 
-## Build with Lovable
+## Key Features
 
-Continue developing this project in the [Lovable editor](https://lovable.dev/projects/8de2cab2-e5cd-43a0-9c22-aa734ef62e91).
+- **Citizen Reporting:** Submit waste-related issues through an accessible public interface.
+- **Real-Time Data Synchronization:** Connects to a shared Supabase database to synchronize records with the management dashboard.
+- **Bilingual Interface:** English and Hindi language support for inclusive public access.
+- **Responsive Design:** Optimized for desktop and mobile devices.
+- **Connected Waste Management:** Supports centralized tracking and visibility of reported issues and related records.
 
-- **Ship faster**: describe what you want to build and Lovable handles the code.
-- **Stay in sync**: every change made in Lovable is committed straight to this repository.
-- **Full ownership**: this code is yours. Push to `main` on GitHub and your changes sync back into Lovable, ready for your next prompt.
+## Tech Stack
 
-## Development
+- **Frontend:** React, TypeScript
+- **Styling:** Tailwind CSS
+- **UI Components:** shadcn/ui
+- **Backend & Database:** Supabase, PostgreSQL
+- **Data Synchronization:** Supabase APIs and real-time capabilities, where configured
+- **Deployment:** Vercel
 
-Prefer working locally? You need Node.js and npm — [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating).
+## Project Vision
 
-```sh
-git clone <this-repository-url>
-cd <repository-name>
-npm i
-npm run dev
-```
+To make waste management more accessible and transparent by connecting citizen participation with a centralized, data-driven waste tracking system.
+
+---
+
+*Built as part of the CivicTrace waste management initiative.*
