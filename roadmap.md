@@ -1,0 +1,3 @@
+- [ ] Add centralized English/Hindi translations and persistent top-right switch without resetting forms.
+- [ ] Translate every public page, error and success state without changing stored data.
+- [ ] Verify language persistence, forms and layouts in both languages.
