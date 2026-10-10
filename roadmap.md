@@ -1,3 +1,3 @@
-- [ ] Add centralized English/Hindi translations and persistent top-right switch without resetting forms.
-- [ ] Translate every public page, error and success state without changing stored data.
-- [ ] Verify language persistence, forms and layouts in both languages.
+- [x] Add centralized English/Hindi translations and persistent top-right switch without resetting forms.
+- [x] Translate every public page, error and success state without changing stored data.
+- [x] Verify language persistence, forms and layouts in both languages (live citizen submission; simulated worker replies avoid SMS and test worker records).
