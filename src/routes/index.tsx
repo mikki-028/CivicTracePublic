@@ -29,7 +29,7 @@ function Index() {
           {t("Scan the")} <span className="scribble">{t("QR code")}</span> {t("on a waste point")}
         </h1>
         <p className="mt-3 text-base text-muted-foreground">
-          Every bin and bulk waste generator in Ward 142 has its own CivicTrace QR. Scan it with your phone camera to open its page.
+          {t("Every bin and bulk waste generator in Ward 142 has its own CivicTrace QR. Scan it with your phone camera to open its page.")}
         </p>
       </div>
       <form

@@ -142,3 +142,12 @@
     color: var(--color-foreground);
   }
 }
+
+html:lang(hi) body {
+  font-family: "Noto Sans Devanagari", "Figtree", sans-serif;
+}
+
+html:lang(hi) input,
+html:lang(hi) button {
+  letter-spacing: 0;
+}
