@@ -28,6 +28,6 @@ export function useLanguage() {
   return {
     ...context,
     t: (key: string, values?: Record<string, string | number>) => translate(context.language, key, values),
-    formatDate: (date: Date) => date.toLocaleString(context.language === "hi" ? "hi-IN" : "en-IN", { dateStyle: "medium", timeStyle: "short" }),
+    formatDate: (date: Date) => date.toLocaleString(context.language === "hi" ? "hi-IN" : "en-IN", { dateStyle: "medium", timeStyle: "short", hour12: false }),
   };
 }

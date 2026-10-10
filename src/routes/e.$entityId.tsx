@@ -30,7 +30,7 @@ export const Route = createFileRoute("/e/$entityId")({
 type View = "home" | "report" | "collection" | "audit";
 
 function EntityPage() {
-  const { t, formatDate } = useLanguage();
+  const { t } = useLanguage();
   const { entityId } = Route.useParams();
   const id = entityId.toUpperCase();
   const valid = ID_RE.test(id);
@@ -55,7 +55,7 @@ function EntityPage() {
 }
 
 function Problem({ title, body, retry }: { title: string; body: string; retry?: () => void }) {
-  const { t, formatDate } = useLanguage();
+  const { t } = useLanguage();
   return (
     <Shell>
       <div className="rounded-3xl border border-border bg-card p-6">
@@ -72,7 +72,7 @@ function Problem({ title, body, retry }: { title: string; body: string; retry?: 
 }
 
 function EntityCard({ e }: { e: Entity }) {
-  const { t, formatDate } = useLanguage();
+  const { t } = useLanguage();
   return (
     <div className="rounded-3xl border border-border bg-card p-5">
       <h1 className="text-4xl font-bold tracking-tight"><span className="scribble">{e.id}</span></h1>
@@ -84,7 +84,7 @@ function EntityCard({ e }: { e: Entity }) {
 }
 
 function Home({ onPick }: { onPick: (v: View) => void }) {
-  const { t, formatDate } = useLanguage();
+  const { t } = useLanguage();
   const items: { v: View; icon: ReactNode; title: string; sub: string }[] = [
     { v: "report", icon: <AlertTriangle className="h-7 w-7" />, title: "Report an issue", sub: "Report an observed problem" },
     { v: "collection", icon: <Truck className="h-7 w-7" />, title: "Confirm collection", sub: "Record a completed collection" },
@@ -110,12 +110,12 @@ function Home({ onPick }: { onPick: (v: View) => void }) {
 }
 
 function Back({ onClick }: { onClick: () => void }) {
-  const { t, formatDate } = useLanguage();
+  const { t } = useLanguage();
   return <button onClick={onClick} className="mt-5 flex items-center gap-1 text-sm text-muted-foreground"><ArrowLeft className="h-4 w-4" />{t("Back")}</button>;
 }
 
 function PhotoAndGps({ file, setFile, gps, setGps }: { file: File | null; setFile: (f: File | null) => void; gps: Gps | "loading" | "denied"; setGps: (g: Gps | "loading" | "denied") => void }) {
-  const { t, formatDate } = useLanguage();
+  const { t } = useLanguage();
   return (
     <div className="space-y-3">
       <label className="flex cursor-pointer items-center gap-3 rounded-2xl border-2 border-dashed border-border bg-card p-4">
@@ -136,7 +136,7 @@ const gpsFields = (g: Gps | "loading" | "denied") =>
   g && typeof g === "object" ? { latitude: g.latitude, longitude: g.longitude, accuracy: g.accuracy } : {};
 
 function Done({ title, lines, back }: { title: string; lines: ReactNode[]; back: () => void }) {
-  const { t, formatDate } = useLanguage();
+  const { t } = useLanguage();
   return (
     <div className="mt-6 rounded-3xl border border-border bg-card p-6">
       <CheckCircle2 className="h-10 w-10 text-primary" />
@@ -150,7 +150,7 @@ function Done({ title, lines, back }: { title: string; lines: ReactNode[]; back:
 const ISSUES = ["Overflowing", "Not collected", "Damaged", "Improper dumping"];
 
 function ReportFlow({ e, back }: { e: Entity; back: () => void }) {
-  const { t, formatDate } = useLanguage();
+  const { t } = useLanguage();
   const [issue, setIssue] = useState<string | null>(null);
   const [file, setFile] = useState<File | null>(null);
   const [gps, setGps] = useState<Gps | "loading" | "denied">(null);
@@ -201,7 +201,7 @@ function ReportFlow({ e, back }: { e: Entity; back: () => void }) {
 }
 
 function WorkerGate({ back, children }: { back: () => void; children: (w: Worker) => ReactNode }) {
-  const { t, formatDate } = useLanguage();
+  const { t } = useLanguage();
   const [worker, setWorker] = useState<Worker | null>(null);
   const [emp, setEmp] = useState("");
   const [phone, setPhone] = useState<string | null>(null);
